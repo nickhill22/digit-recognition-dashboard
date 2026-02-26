@@ -5,7 +5,7 @@ from PIL import Image
 from streamlit_drawable_canvas import st_canvas
 import matplotlib.pyplot as plt
 
-model = tf.keras.models.load_model("model/mnist_cnn.keras")
+model = tf.keras.models.load_model("mnist_cnn.keras")
 
 st.title("🧠 Handwritten Digit Recognition Dashboard")
 st.write("Draw a digit below:")
@@ -37,4 +37,5 @@ if canvas_result.image_data is not None:
 
     fig, ax = plt.subplots()
     ax.bar(range(10), prediction[0])
+
     st.pyplot(fig)
